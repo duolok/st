@@ -21,9 +21,9 @@
 You should have xlib header files and libharfbuzz build files installed.
 
 ```
-git clone https://github.com/LukeSmithxyz/st
+git clone https://github.com/duolok/st
 cd st
-sudo make install
+sudo make clean install
 ```
 
 On OpenBSD, be sure to edit `config.mk` first and remove `-lrt` from the
