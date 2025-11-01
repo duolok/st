@@ -105,36 +105,39 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 1.0;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#333333",
-    "#8c4665",
-    "#287373",
-    "#737c99",
-    "#395573",
-    "#5e468c",
-    "#31658c",
-    "#988ca1",
+    /* 8 normal colors */
+    "#141415",
+    "#d8647e",
+    "#7fa563",
+    "#f3be7c",
+    "#6e94b2",
+    "#aeaed1",
+    "#7e98e8",
+    "#cdcdcd",
 
-	"#ffffff",
-    "#bf4d80",
-    "#53a6a6",
-    "#9e9ecb",
-    "#477ab3",
-	"#7362b3",
-    "#6096bf",
-    "#c0c0c0",
+    /* 8 bright colors */
+    "#333738",
+    "#c48282",
+    "#e8b589",
+    "#c3c3d5",
+    "#9bb4bc",
+    "#bb9dbd",
+    "#90a0b5",
+    "#f0f0f0",
 
-	[255] = 0,
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#d651a4", /* 256 -> cursor */
-	"#6ea6b5", /* 257 -> rev cursor*/
-	"#000000", /* 259 -> fg */
-	"#c0c0c0", /* 258 -> bg */
+    [255] = 0,
+
+    /* more colors can be added after 255 to use with DefaultXX */
+    "#cdcdcd",
+    "#141415",
+    "#141415",
+    "#d8647e",
 };
 
 
@@ -555,5 +558,4 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
-
 
